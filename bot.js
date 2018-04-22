@@ -180,8 +180,8 @@ if (['mute', 'мут', 'заклеить_рот', 'заткнуть', 'затк�
 });
 
 bott.on('messageReactionAdd', (reaction, user) => {
-  reaction.remove (user);
-if (reaction.message.id !== '434392105775792128')
+    if (reaction.message.id !== '434392105775792128')
+    reaction.remove (user);
   return ;
 if (reaction.emoji.name === '🚹'){
   const member = reaction.message.guild.members.get (user.id);
