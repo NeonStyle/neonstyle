@@ -16,6 +16,10 @@ bott.channels.get ('432147733273378816').fetchMessage ('434392105775792128');
 color ();
 });
 
+bott.on('guildMemberAdd', (member) => {
+    bott.channels.get('428176509279404032').send(`${member.user.tag} Присоединился ХАРОШ <a:wumpusparty:428277275805483008>`)
+});
+
 bott.on('guildMemberRemove', (member) => {
     bott.channels.get('428487097154928641').send(`${member.user.tag}, ливнул с Neon Style. ПИДОРАС <a:soangry:428277275696431114>`)
 });
