@@ -1,7 +1,6 @@
 {
-  "name": "JonedVoiceBot",
-  "description": "Bot for Dicord JonedVoice server",
-  "version": "1.7.1",
+  "name": "NeonStyleBot",
+  "version": "2.2.8",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
