@@ -196,4 +196,5 @@ member.removeRole ('427214168685412353').catch ();
     member.addRole('429746509404307472');
     });
 
-bott.login('NDI4MjI3NTk4NzI4OTUzODU2.Dbkf9A.1CU18uYhNJnanC87L_WE-YlGXyo')
+bott.login(process.env.TOKEN);
+process.env.TOKEN = 'ПАШОЛ НАХОЙ ПИДАРАС ЕБАНЫЙ МАТЬ ТВОЮ ЕБАЛ КОНЧЕНОЕ СОЗДАНИЕ, ТВОЯ МАТЬ СДОХЛА МУЧАЯСБ КОГДА Я ЗАЛИВАЛ ЕЙ В УШИ СВОЁ ДЕРЬМО, ОБОССЫШЬ >:)';
