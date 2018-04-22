@@ -16,6 +16,11 @@ bott.channels.get ('432147733273378816').fetchMessage ('434392105775792128');
 color ();
 });
 
+bott.on('guildMemberRemove', (member) => {
+    bott.channels.get('428487097154928641').send(`${member.user.tag}, ливнул с Neon Style. ПИДОРАС <a:soangry:428277275696431114>`)
+});
+
+
 bott.on('message', message => {
     if (message.content === 'Хостинг бота'){
         const embed = new Discord.RichEmbed()
