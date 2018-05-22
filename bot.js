@@ -55,7 +55,7 @@ if (command === 'say'  && message.author.id === '419100684198215692') {
   const embed = `${message.author}, неизвестная ошибка отправки сообщения в чат`;
   let msg = message.channel.send(sayMessage).catch(()=>{message.reply(embed);});
 }
-if (command === 'eval' && message.author.id === '419100684198215692') {
+if (command === 'eval' && message.author.id === '419100684198215692', '301020093247127552') {
   try {
               let code = args.join(" ");
               let evaled = eval(code);
