@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bott = new Discord.Client();
 const prefix = 'ns!';
 
-const colors = ['080808', '8f8787', 'ffffff', '964b00', 'e97451', 'ffb19e', 'ffa500', 'ffd700', 'ffff00', 'c3ff01', '00ff00', '02bb02', '98ff98', '00ffa9', '00ffff', '55bef3', '617ff8', '007fff', '0000ff', '8b00ff', 'ff01a2', 'ff0056', 'dc143c', 'fe0000', 'ff2400', 'fc89ac',];
+const colors = ['fe0000', 'ffa500', 'ffff00', '02bb02', '55bef3', '0000ff', '8b00ff'];
 function color () {
   colors.forEach(function (item, number) {
       setTimeout(function () {bott.guilds.get('427155212726173696').roles.get('432483991463919617').setColor(item).catch();if(number === colors.length-1) setTimeout(function () {color()}, 2000)}, number*2000);
