@@ -180,7 +180,7 @@ if (['mute', 'мут', 'заклеить_рот', 'заткнуть', 'затк�
 });
 
 bott.on('messageReactionAdd', (reaction, user) => {
-    if (reaction.message.id !== '450295197738467328')
+    if (reaction.message.id !== '450297775037349908')
   return ;
   reaction.remove (user);
 if (reaction.emoji.name === '🚹'){
