@@ -12,7 +12,7 @@ function color () {
 bott.on('ready', () => {
   console.log(`Logged in as ${bott.user.tag}!`);
   bott.user.setPresence({ game: { name: `на сервер`, type: 3 } }).catch();
-  bott.channels.get ('450295002132774924').fetchMessage ('450295197738467328');
+  bott.channels.get ('450295002132774924').fetchMessage ('450297775037349908');
 color ();
 });
 
