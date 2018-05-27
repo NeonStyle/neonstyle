@@ -12,7 +12,7 @@ function color () {
 bott.on('ready', () => {
   console.log(`Logged in as ${bott.user.tag}!`);
   bott.user.setPresence({ game: { name: `на сервер`, type: 3 } }).catch();
-  bott.channels.get ('').fetchMessage ('');
+  bott.channels.get ('450295002132774924').fetchMessage ('450295197738467328');
 color ();
 });
 
@@ -21,7 +21,7 @@ bott.on('guildMemberAdd', (member) => {
 });
 
 bott.on('guildMemberRemove', (member) => {
-    bott.channels.get('428288925862199323').send(`**${member.user.tag}, ливнул с **▶ASTERIAS**  ПИДОРАС** `)
+    bott.channels.get('428288925862199323').send(`**${member.user.tag}, ливнул с ▶ASTERIAS  ПИДОРАС** `)
 });
 
 
@@ -180,23 +180,21 @@ if (['mute', 'мут', 'заклеить_рот', 'заткнуть', 'затк�
 });
 
 bott.on('messageReactionAdd', (reaction, user) => {
-    if (reaction.message.id !== '')
+    if (reaction.message.id !== '450295197738467328')
   return ;
   reaction.remove (user);
 if (reaction.emoji.name === '🚹'){
   const member = reaction.message.guild.members.get (user.id);
-  member.addRole ('').catch();
-member.removeRole ('').catch ();
+  member.addRole ('428481013715304448').catch();
 }
 if (reaction.emoji.name === '🚺'){
   const member = reaction.message.guild.members.get (user.id);
-  member.addRole ('').catch();
-member.removeRole ('').catch ();
+  member.addRole ('428481130707156992').catch();
 }
   } )
 
   bott.on("guildMemberAdd", member => {
-    member.addRole('');
+    member.addRole('450296270221738004');
     });
 
 bott.login(process.env.TOKEN);
