@@ -41,7 +41,7 @@ if(message.author.bot) return;
         if(message.content.indexOf(prefix) !== 0) return;
         const args = message.content.slice(prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
-if (command === 'clear' && message.author.id === '419100684198215692') {
+if (command === 'clear') {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply ("sorry, you haven't permission MANAGE_MESSAGE"); 
   if(!args[0]) return message.channel.send ("ERROR"); 
   message.channel.bulkDelete(parseInt(args[0])+1).then(() => { 
