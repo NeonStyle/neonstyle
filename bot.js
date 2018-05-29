@@ -33,8 +33,6 @@ bott.on('message', message => {
     .setColor('#0077ff')
     .setFooter('Команда ▶ASTERIAS')
     .setTimestamp()
-    .attachFile('lol.gif')
-    .setImage('attachment://lol.gif')
     .setTitle(`Все вопросы по боту рассматривает хост`)
     .setDescription(`**Этот бот хостится пользователем -** <@!419100684198215692>`);
     message.channel.send({embed: embed});
