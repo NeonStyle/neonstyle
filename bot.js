@@ -73,6 +73,15 @@ if (command === 'say'  && message.author.id === '419100684198215692') {
         return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
     }
     
+    function embed_error(text) {
+        let error_emoji = bott.emojis.get(emojis.error);
+        return new Discord.RichEmbed()
+            .setTitle('Ошибка')
+            .setColor('#C34E4E')
+            .setFooter('Smart-Bot')
+            .setDescription(`${error_emoji} ${text}`);
+    }
+    
     function isNumeric(n) {
         return !isNaN(parseFloat(n)) && isFinite(n);
     }
