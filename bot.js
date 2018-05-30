@@ -1,28 +1,26 @@
 const Discord = require("discord.js");
 const bott = new Discord.Client();
-const prefix = 'As!';
+const prefix = 'S!';
 
 const colors = ['080808', '8f8787', 'ffffff', '964b00', 'e97451', 'ffb19e', 'ffa500', 'ffd700', 'ffff00', 'c3ff01', '00ff00', '02bb02', '98ff98', '00ffa9', '00ffff', '55bef3', '617ff8', '007fff', '0000ff', '8b00ff', 'ff01a2', 'ff0056', 'dc143c', 'fe0000', 'ff2400', 'fc89ac',];
 function color () {
   colors.forEach(function (item, number) {
-      setTimeout(function () {bott.guilds.get('428223641533022219').roles.get('428693320919678977').setColor(item).catch();if(number === colors.length-1) setTimeout(function () {color()}, 2000)}, number*2000);
+      setTimeout(function () {bott.guilds.get('450302185318645781').roles.get('451475771819819010').setColor(item).catch();if(number === colors.length-1) setTimeout(function () {color()}, 2000)}, number*2000);
   });
 }
 
 bott.on('ready', () => {
   console.log(`Logged in as ${bott.user.tag}!`);
-  bott.user.setPresence({ game: { name: `на сервер`, type: 3 } }).catch();
-  bott.emojis.get('450303982699544577');
-  bott.channels.get ('450295002132774924').fetchMessage ('450297775037349908');
+  bott.user.setPresence({ game: { name: `в небо`, type: 3 } }).catch();
 color ();
 });
 
 bott.on('guildMemberAdd', (member) => {
-    bott.channels.get('428288925862199323').send(`**${member.user.tag}** **Присоединился ХАРОШ** `)
+    bott.channels.get('451476951878860801').send(`**${member.user.tag}** **Присоединился ХАРОШ** `)
 });
 
 bott.on('guildMemberRemove', (member) => {
-    bott.channels.get('428288925862199323').send(`**${member.user.tag}, ливнул с ▶ASTERIAS  ПИДОРАС** `)
+    bott.channels.get('451476968395898910').send(`**${member.user.tag}, ливнул ПИДОРАС** `)
 });
 
 
@@ -31,7 +29,7 @@ bott.on('message', message => {
         const embed = new Discord.RichEmbed()
     .setAuthor('Coder')
     .setColor('#0077ff')
-    .setFooter('Команда ▶ASTERIAS')
+    .setFooter('Команда Smart-Bot')
     .setTimestamp()
     .setTitle(`Все вопросы по боту рассматривает хост`)
     .setDescription(`**Этот бот хостится пользователем -** <@!419100684198215692>`);
@@ -80,7 +78,7 @@ if (command === 'say'  && message.author.id === '419100684198215692') {
         return new Discord.RichEmbed()
             .setTitle('Ошибка')
             .setColor('#C34E4E')
-            .setFooter('▶ASTERIAS')
+            .setFooter('Smart-Bot')
             .setDescription(`${error_emoji} ${text}`);
     }
     
@@ -89,8 +87,8 @@ if (command === 'say'  && message.author.id === '419100684198215692') {
     }
     async function unmute(member, mute_id, time, reason = 'Автоматический анмут') {
         setBigTimeout( function () {
-                    member.removeRole('427940392785281025').catch(console.error);
-                    member.user.send('Волшебная сила размутила вас ▶ASTERIAS');
+                    member.removeRole('451477330632769536').catch(console.error);
+                    member.user.send('Волшебная сила размутила вас');
         }, time+1000);
     }
     if (['mute', 'мут', 'заклеить_рот', 'заткнуть', 'заткнись', 'закройся'].includes(command) && message.member.hasPermission('MANAGE_MESSAGES')) {
@@ -154,21 +152,21 @@ if (command === 'say'  && message.author.id === '419100684198215692') {
                     message.delete();
                         if (reason === null || typeof reason === 'undefined') reason = 'Причина не указана.';
                         let embed = new Discord.RichEmbed()
-                            .setTitle('Вас замутили на ▶ASTERIAS')
+                            .setTitle('Вас замутили на ')
                             .addField('Пользователь', `${user.user} (\`${user.user.tag}\`)`, true)
                             .addField('Администратор', `${message.author} (\`${message.author.tag}\`)`, true)
                             .addField('Окончание мута', getTimeInWords(time_formatted), true)
                             .setColor('ffff00');
                         let dm_embed = new Discord.RichEmbed()
                             .setTitle('Размут')
-                            .setDescription('Вы были размучены на ▶ASTERIAS')
+                            .setDescription('Вы были размучены')
                             .addField('Администратор', `${message.author} (\`${message.author.tag}\`)`, true)
                             .addField('Окончание мута', getTimeInWords(time_formatted), true)
                             .setColor('90ee90');
                         if (reason !== null && typeof reason !== undefined && reason !== '') {embed.addField('Причина', `${reason}`);dm_embed.addField('Причина', `${reason}`);}
                         message.channel.send(`${user.user}`, {embed}).then(() => {message.channel.stopTyping(true)}).then(() => {if (message.author.id === user.user.id) message.channel.send(`${message.author}, не ну ты и долбоеб братишка, земля тебе пухом... ${bott.emojis.get(emojis.facepalm)}`)});
                         user.send({embed});
-                        user.addRole('427940392785281025').catch(console.error);
+                        user.addRole('451477330632769536').catch(console.error);
                         console.log(time);
                         unmute(user, user.id, time*1000).catch(console.error);
                 }
@@ -179,7 +177,7 @@ if (command === 'say'  && message.author.id === '419100684198215692') {
     });
 
   bott.on("guildMemberAdd", member => {
-    member.addRole('450296270221738004');
+    member.addRole('451475771819819010');
     });
 
 bott.login(process.env.TOKEN);
